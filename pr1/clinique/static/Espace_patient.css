@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:root {
+  --color: #19c8fa;
+  --color2: rgb(15 116 143/70%);
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  /* background-color: black; */
+  background-color: #e0e0e0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.main-heading {
+  text-align: center;
+}
+.main-heading h1::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: black;
+  bottom: -30px;
+  width: 130px;
+}
+.main-heading h1 {
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+.main-heading h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  bottom: -38px;
+  border: 2px solid #333;
+  background-color: white;
+}
+.portofolio .img-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-top: 60px; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  max-width: 900px;
+  margin: auto;
+  background-color: #f5f5f5;
+}
+.portofolio .img-container .box {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .portofolio .img-container .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .portofolio .img-container .box {
+    flex-basis: 25%;
+  }
+}
+.portofolio .img-container .box img {
+  max-width: 100%;
+}
+.portofolio .img-container .box:hover img {
+  transform: scale(1.1) rotate(3deg);
+}
+.portofolio .img-container .box .caption {
+  position: absolute;
+  transform: 0.5s;
+  background-color: white;
+  bottom: -100px;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+}
+.portofolio .img-container .box:hover .caption {
+  bottom: 0;
+}
+.portofolio .img-container .box .caption h4 {
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+.portofolio .img-container .box .caption p {
+  color: var(--color);
+}

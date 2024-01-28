@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/Espace_patient.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+
+        <div class="portofolio">
+            <div class="container">
+                <div class="main-heading">
+                    <h1>Services</h1>
+                </div>
+            </div>
+
+            <div class="img-container">
+                <div class="box">
+                    <a href="cardiology.html"> <!-- Ajouter l'URL de la page cardiology.html -->
+                        <img src="pictures/infos (1).jpeg" alt="Cardiology">
+                        <div class="caption">
+                            <h4>Information</h4>
+                            <p>Information du Patient</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="box">
+
+                    <a href="{% url 'prendre_rendezvous' %}">
+                        <img src="pictures/Prendre_rdv.jpeg" alt="Patient">
+                        <div class="caption">
+                            <h4>Rendez-Vous</h4>
+                            <p>Prendre un Rendez-Vous</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="box">
+                    <a href="{url 'login_or_add_patient/'}"> <!-- Ajouter l'URL de la page patient.html -->
+                        <img src="pictures/rdz.jpeg" alt="Patient">
+                        <div class="caption">
+                            <h4>Mes Rendez_Vous</h4>
+                            <p>Consulter mes Rendez_Vous</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    </div>
+</body>
+
+</html>

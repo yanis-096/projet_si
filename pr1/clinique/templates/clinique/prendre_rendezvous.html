@@ -1,0 +1,20 @@
+<!-- clinique/templates/clinique/prendre_rendezvous.html -->
+{% load static %} <!-- Ajoutez cette ligne au début du fichier -->
+
+<link rel="stylesheet" type="text/css" href="{% static 'prendre_rdv.css' %}">
+<div class="main-heading">
+    <h1>Prendre un Rendez-vous</h1>
+</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <label for="id_medecin">Choisir un médecin:</label>
+    <select name="medecin" id="id_medecin">
+        {% for medecin in medecins %}
+        <option value="{{ medecin.id }}">{{ medecin.nom }} {{ medecin.prenom }} - {{ medecin.specialite }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Prendre rendez-vous</button>
+</form>

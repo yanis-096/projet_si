@@ -1,0 +1,13 @@
+<!-- clinique/templates/clinique/ajouter_patient.html -->
+{% load static %} <!-- Ajoutez cette ligne au début du fichier -->
+
+<link rel="stylesheet" type="text/css" href="{% static 'Ajouter_Patient.css' %}">
+<div class="main-heading">
+    <h1>Ajouter un Patient</h1>
+
+</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enregistrer</button>
+</form>

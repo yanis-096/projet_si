@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:root {
+  --color: #19c8fa;
+  --color2: rgb(15 116 143/70%);
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  /* background-color: black; */
+  background-color: #e0e0e0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.main-heading {
+  text-align: center;
+}
+.main-heading h1::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: black;
+  bottom: -30px;
+  width: 130px;
+}
+.main-heading h1 {
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+.main-heading h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  bottom: -38px;
+  border: 2px solid #333;
+  background-color: white;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f5f5f5;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+input,
+select,
+label {
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: backgroundcolor 0.3s ease;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Add Patient</title>
+    {% load static %} <!-- Ajoutez cette ligne au début du fichier -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+</head>
+
+<body>
+    <div class="main-heading">
+        <h1>Login or Add Patient</h1>
+    </div>
+
+    <form method="post" action="{% url 'login_or_add_patient' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="btt">
+            <button type="submit">Submit</button>
+            <button type="submit">s'inscrire</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

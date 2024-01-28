@@ -1,0 +1,51 @@
+<!-- templates/clinique/liste_rendezvous_cardiologie.html -->
+
+<!DOCTYPE html>
+<html>
+
+
+{% load static %} <!-- Ajoutez cette ligne au début du fichier -->
+
+<link rel="stylesheet" type="text/css" href="{% static 'templates.css' %}">
+
+<head>
+    <title>Liste des Rendez-vous - Cardiologie</title>
+</head>
+
+<body>
+
+    <div class="main-heading">
+        <h1> spécifiques à la cardiologie :</h1>
+    </div>
+    <div class="infos">
+        <p>La description:{{ departement_cardiologie.description }}</p>
+        <p>Équipement cardiologie : {{ departement_cardiologie.equipement_cardiologie }}</p>
+        <p>Procédures cardiologie : {{ departement_cardiologie.procedures_cardiologie }}</p>
+    </div>
+    <div class="main-heading">
+        <h1>Liste des Rendez-vous - Cardiologie</h1>
+    </div>
+    {% for medecin, rendezvous in rendezvous_par_medecin.items %}
+    <h2 style="text-align: center;margin-bottom: 10px;">{{ medecin.nom }} {{ medecin.prenom }}</h2>
+    <div class="list" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+">
+        <ul>
+            {% for rdv in rendezvous %}
+            <li>{{ rdv.date_rdv }} à {{ rdv.heure_rdv }}</li>
+            {% endfor %}
+        </ul>
+
+        {% endfor %}
+
+    </div>>
+
+    </div>
+
+
+</body>
+
+</html>
